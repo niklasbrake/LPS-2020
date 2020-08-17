@@ -5,7 +5,7 @@ Solek CM, Farooqi NAI, Brake N, Kesner P, Antel JP, Ruthazer ES. Early inflammat
 
 There are four sections to this repository:
 * **stimulus_presentation**. This contains the functions used to create the GUI for presenting visual stimuli.
-* **data_analysis**. This contains the functions used to extract data from raw ThorLabs data files and analysis image and time series data.
+* **data_analysis**. This contains the functions used to extract data from raw ThorLabs data files and analyse image and time series data.
 * **misc_functions**. This contains miscellaneous functions.
 
 I completed this work as an undergraduate research assistant in the [RuthazerLab](http://ruthazerlab.mcgill.ca/) in 2016-2017. A brief overview of the pipeline is presented in the document "Pipeline Overiew.docx". 
