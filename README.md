@@ -1,7 +1,7 @@
 ## What is this?
 In this repository is the code associated with the following paper: 
 
-**Solek CM, Farooqi NAI, Brake N, Kesner P, Antel JP, Ruthazer ES. "Early inflammation dysregulates neuronal circuit formation in vivo via upregulation of IL-1β."**
+**Solek CM, Farooqi NAI, Brake N, Kesner P, Antel JP, Ruthazer ES. "Early inflammation dysregulates neuronal circuit formation in vivo via upregulation of IL-1β." *In preparation.* **
 
 There are four sections to this repository:
 * **stimulus_presentation**. This contains the functions used to create the GUI for presenting visual stimuli.
