@@ -8,7 +8,7 @@ There are four sections to this repository:
 * **data_analysis**. This contains the functions used to extract data from raw ThorLabs data files and analyse image and time series data.
 * **misc_functions**. This contains miscellaneous functions.
 
-I completed this work as an undergraduate research assistant in the [RuthazerLab](http://ruthazerlab.mcgill.ca/) in 2016-2017. A brief overview of the pipeline is presented in the document "Pipeline Overiew.docx". 
+A brief overview of the pipeline is presented in the document "Pipeline Overiew.docx". 
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
