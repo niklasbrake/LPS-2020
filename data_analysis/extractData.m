@@ -196,6 +196,8 @@ function [header ImageData] = getTimeSeries(Folder,Register)
   end
 
   delete(fullfile(Folder,'tform.mat'));
+  K.reset();
+  K.close();
 
 end
 

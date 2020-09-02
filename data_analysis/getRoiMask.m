@@ -56,3 +56,6 @@ for r = 1:length(rois)
 	RoiCoordinates(2,r) = mean(temp(2,:));
 	RoiCoordinates(3,r) = Slice;
 end
+IJ.run('Close All');
+K.reset();
+K.close();

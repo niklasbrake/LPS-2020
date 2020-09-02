@@ -11,10 +11,10 @@ function plotROIdetection(folder,sliceNo)
 	% load(fullfile(folder,[Fish '.mat']));
 	load(fullfile(folder,[Fish ' RoiMask.mat']));
 
-	fig = figure('color','w');
-	fig.Position(3) = fig.Position(4);
+	% fig = figure('color','w');
+	% fig.Position(3) = fig.Position(4);
 
-	axes('Position',[0.05,0.05,0.9,0.9]);
+	% axes('Position',[0.05,0.05,0.9,0.9]);
 	imagesc(log(double(I))); % Log of intensity taken to better see cells
 	colormap('gray'); % Colormap. Google MATLAB colormaps to see other options
 	axis square;
