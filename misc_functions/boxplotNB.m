@@ -12,4 +12,4 @@ function h = boxplotNB(xCntr,Y,colorScheme,markersize)
 	hold on;
 
 	h = scatter(X,Y,markersize,colorScheme,'filled','MarkerFaceAlpha',0.4); hold on;
-	scatter(xCntr,nanmean(Y),10+markersize,'w','filled','MarkerEdgeColor','k')
+	scatter(xCntr,nanmedian(Y),10+markersize,'w','filled','MarkerEdgeColor','k')
