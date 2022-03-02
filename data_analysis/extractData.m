@@ -76,7 +76,8 @@ function header = extractData(Folder, ImageData, Register)
 end
 
 function [header ImageData] = getTimeSeries(Folder,Register)
-
+  Folder = char(Folder); % Fix bug with ImageJ when Folder path is a string
+  
   % Get Folder name, save data with name 
   [Path ExperimentName] = fileparts(Folder);
   fileName = [ExperimentName '.mat'];

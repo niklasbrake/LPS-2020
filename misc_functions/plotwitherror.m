@@ -3,14 +3,15 @@ function h =plotwitherror(x,y,isstdrr,varargin)
 	if(isstdrr)
 		ymu = nanmean(y,2);
 		% ymu = nanmedian(y,2);
-		ylo = ymu-stderror(y')';
-		yhi = ymu+stderror(y')';
+		z = icdf('norm',0.975,0,1);
+		ylo = ymu-z*stderror(y')';
+		yhi = ymu+z*stderror(y')';
 	else
 		ymu = nanmedian(y,2);
-		% ylo = quantile(y,0.05,2);
-		ylo = quantile(y,0.75,2);
-		% yhi = quantile(y,0.95,2);
-		yhi = quantile(y,0.25,2);
+		ylo = quantile(y,0.05,2);
+		% ylo = quantile(y,0.75,2);
+		yhi = quantile(y,0.95,2);
+		% yhi = quantile(y,0.25,2);
 	end
 
 	h = plot(x,ymu,varargin{:}); hold on;
@@ -25,7 +26,6 @@ function h =plotwitherror(x,y,isstdrr,varargin)
 	yfvec = [ylo;flip(yhi)];
 	F = fill(xfvec(:),yfvec(:),'k');
 
-	hold off;
 	if(isempty(F))
 		return;
 	end

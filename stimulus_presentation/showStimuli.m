@@ -106,7 +106,7 @@ case 3  % Display Brightness Levels
 
   % Load stimuli into matrix
   for i = 1:num+1
-    vars{1} = i;
+    vars{1} = i-1;
     y = number2data(vars);
     I(:,:,i) = circle({y,width,height,ssiz,buff,radius,Background});
   end
@@ -158,6 +158,7 @@ case 6 % Orientation Selectivity
   I = ones(height,width,180/num+1);
 
   H = ssiz/20;
+  
   y1 = (height-ssiz/2+buff);
   x1 = (width/2);
 
@@ -417,6 +418,7 @@ elseif(typ == 8) %Special presentation for looming. Here, num refers to the max 
 
 else    % All other stimuli
 
+  ran
   for i = 1:length(ran)
     data(i,2) = toc(start);
     % Presentation background as control
@@ -448,14 +450,19 @@ end
 
 file = fullfile(handles.folder,'StimulusTimes.txt');
 file2 = fullfile(handles.folder,'StimulusConfig.txt');
-
+file3 = fullfile(handles.folder,'StimulusMatrix.mat');
 i = 2;
 
 while(exist(file))
   file = fullfile(handles.folder,['StimulusTimes(' int2str(i) ').txt']);
   file2 = fullfile(handles.folder,['StimulusConfig(' int2str(i) ').txt']);
+  file3 = fullfile(handles.folder,['StimulusMatrix(' int2str(i) ').mat']);
   i = i + 1;
 end
+
+stimulusID = unique(data(:,3));
+stimulusMatrix = I;
+save(file3,'stimulusMatrix','stimulusID');
 
 %Added condition to write 'data_special_looming' (with additional
 %time-vs-radius information) to file, instead of 'data', if the looming
